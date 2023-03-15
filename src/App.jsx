@@ -42,7 +42,14 @@ function App() {
         <Route path='/aboutclinic' element={<AboutClinic /> } />
       
      
-           <Route path='/blogs' element={<Blogs />} />
+          {
+            item ?(
+              <Route path='/blogs' element={<Blogs />} />
+            ):
+            (
+              <Route path='/blogs' element={<Login />} />
+            )
+          }
        
         <Route path='/blogs/:blogID' element={<BlogDetail />} />
         <Route path='/login' element={<Login />} />
