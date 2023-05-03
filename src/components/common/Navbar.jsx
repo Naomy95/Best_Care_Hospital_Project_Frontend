@@ -7,6 +7,7 @@ import loginmb from "../../assets/images/loginmb.png";
 import AppointmentButton from "../buttons/AppointmentButton";
 import LoginModalForm from "../login/LoginModalForm";
 import { useNavigate } from "react-router-dom";
+import menu from '../../assets/images/menu.png'
 
 const Navbar = () => {
   const token = localStorage.getItem("access_token");
@@ -16,7 +17,7 @@ const Navbar = () => {
     <div>
       <div className="navbar bg-base-100 px-2  py-2 hidden lg:flex lg:px-28">
         <div className="navbar-start">
-          <img src={logo} className="h-14 w-56" alt="Best Care" />
+          <img src={logo} className="h-16 w-56" alt="Best Care" />
         </div>
         <div className="navbar-center hidden lg:flex ">
           <div className="flex mr-20">
@@ -38,12 +39,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="navbar px-4 bg-white lg:bg-navbarcolor lg:px-28">
+      <div className="navbar px-4 bg-white lg:bg-navbarcolor lg:px-28 shadow-lg">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
-            <label tabIndex={0} className="btn btn-ghost ">
+            <label tabIndex={0} >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns={menu}
                 className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -125,10 +126,10 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-center lg:hidden ">
-          <img src={logo} className="h-14 w-48 " alt="Best Care" />
+          <img src={logo} className="h-14 w-44 " alt="Best Care" />
         </div>
         <div className="navbar-end">
-          <div className="flex rounded-lg  lg:items-center ">
+          <div className="lg:flex hidden  lg:items-center  p-2 border rounded-md border-[1px] border-white">
             <img className="w-1 h-1 lg:w-1/2 lg:h-1/2" src={login} alt="" />
 
             {token ? (
@@ -140,10 +141,10 @@ const Navbar = () => {
                     window.location.reload(true);
                   }}
                 >
-                  Log Out
+                  Logout
                 </a>
                 <img
-                  className="lg:hidden w-12 h-12"
+                  className="lg:hidden w-10 h-10"
                   src={loginmb}
                   onClick={() => {
                     localStorage.clear();
@@ -154,7 +155,7 @@ const Navbar = () => {
             ) : (
               <label >
                 {" "}
-                <a className=" lg:text-white text-buttoncolor  text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans pl-">
+                <a className=" lg:text-white border-[1px] border-buttoncolor p-2 lg:p-0 rounded-lg text-buttoncolor  text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans ml-2 font-semibold lg:font-normal">
                   Login
                 </a>
                 <input
@@ -171,19 +172,35 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* {
-  !token ?(
-    <div>
-        <label htmlFor="my-modal"> <a className=" text-buttoncolor lg:hidden text-md font-semibold hover:bg-hoverBackground hover:text-black mr-4 font-sans pl-2">Login</a>     </label>
-  <input type="checkbox" id="my-modal" className="modal-toggle" />
-  <LoginModalForm />
+          <div className="flex  lg:hidden  p-2 border rounded-md border-[1px] border-white">
 
-    </div>
-  ):(
-    <img className="lg:hidden w-12 h-12"  src={loginmb} onClick={()=>{localStorage.clear();location.reload()}}></img>
-    
-  )
-} */}
+            {token ? (
+              <div>
+               
+                <img
+                  className="lg:hidden w-10 h-10"
+                  src={loginmb}
+                  onClick={() => {
+                    localStorage.clear();
+                    window.location.reload(true);
+                  }}
+                ></img>
+              </div>
+            ) : (
+              <label onClick={()=>{navigate('/login')}}>
+                {" "}
+                <a className=" lg:text-white border-[1px] border-buttoncolor p-2 lg:p-0 rounded-lg text-buttoncolor  text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans ml-2 font-semibold lg:font-normal">
+                  Login
+                </a>
+            
+              </label>
+             
+           
+           
+            )}
+          </div>
+
+  
         </div>
       </div>
     </div>

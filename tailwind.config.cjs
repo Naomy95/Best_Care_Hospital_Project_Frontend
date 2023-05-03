@@ -37,6 +37,8 @@ module.exports = {
         showWax: 'rgba(43, 43, 43, 0.9)',
         showWaxLight: 'rgba(43, 43, 43, 0.6)',
         violet: '#707BFF',
+        commentcolor:"rgb(187, 181, 181)",
+        boxcolor:'rgb(247, 248, 248)'
       },
       width: {
         190: '760px',

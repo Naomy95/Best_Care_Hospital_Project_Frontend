@@ -16,7 +16,7 @@ const BlogCard = ({headertext,text,date,commentNo,image,onClick}) => {
         <p>{date}</p>
         <div className='flex px-12'>
             <img src={comment} alt="" />
-            <p>{commentNo}</p>
+            <p className='pl-4'>{commentNo}</p>
         </div>
         
       </div>

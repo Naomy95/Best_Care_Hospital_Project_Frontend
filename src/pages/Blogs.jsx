@@ -19,21 +19,27 @@ const Blogs = () => {
     queryKey: ['blogs'],
     queryFn: () => getBlogs(),
   })
+  
   if (isError) return <div>Error</div>
   if (isLoading) return <div>Loading</div>
-  console.log(blogs[0])
+  console.log(blogs)
+
+  const blogstoRender = blogs.filter(blog=>blog.display)
+  const numComments=blogstoRender.length
+  console.log(blogstoRender)
   return (
     <>
     <Navbar />
     <div className="px-4 py-10 lg:px-28">
+     
     
       {blogs.map((blog,id)=>(
-         <div className="mb-10">
+         <div className="mb-10" key={id}>
         <BlogCard 
         headertext={blog.category}
         text={blog.title}
         date={blog.date.toString().split("T")[0]}
-        commentNo="12"
+        commentNo={blog.comments.length}
         image={blog.header_image}
         onClick={()=>navigate(`/blogs/${blog._id}`)}
         

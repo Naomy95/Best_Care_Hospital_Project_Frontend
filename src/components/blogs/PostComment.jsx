@@ -6,7 +6,8 @@ const PostComment = ({uid}) => {
     const [message,setMessage]=useState('')
     const postComments=()=>{
         const username=localStorage.getItem('username')
-          const comment={name:username,message:message}
+          const date=new Date().toDateString()
+          const comment={name:username,message:message, date:date}
           console.log(comment)
           postComment({uid,comment:comment}).then(res=>{console.log(res.data); window.location.reload(true)})
           

@@ -13,6 +13,12 @@ export const getSpecificBlog = async (uid) => {
     })
     return res.data
   }
+// export const postComment = ({uid,comment:comment}) => {
+//     return  axios.post(`https://best-care-hospital-backend.vercel.app/comments`,{uid,comment:comment}, {
+//       headers: { 'Content-Type': 'application/json' },
+//     })
+
+//   }
 export const postComment = ({uid,comment:comment}) => {
     return  axios.post(`https://best-care-hospital-backend.vercel.app/comments`,{uid,comment:comment}, {
       headers: { 'Content-Type': 'application/json' },

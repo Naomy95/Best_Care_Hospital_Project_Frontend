@@ -31,7 +31,7 @@ const Appointment = () => {
         <div className="bg-buttoncolor text-center p-6 text-white text-sans text-3xl rounded-t-lg">Ask Us Anything</div>
        <div className="px-14 bg-white py-4 rounded-b-lg">
 
-       <div className="mb-6">
+       <div className="mb-6" id="form">
           <label
             htmlFor="full_name"
             className="block mb-2 text-sm font-medium text-black"
@@ -96,7 +96,7 @@ const Appointment = () => {
           ></input>
         </div>
 
-     <SubmitButton onClick={()=>alert('Your Appointment is on the way!!')} />
+     <SubmitButton onClick={()=>{alert('Your Appointment is on the way!!'); location.reload()}} />
 
      <p className="text-black text-sm font-medium font-sans py-4">By clicking the button you agree to the Privacy Policy
 and Terms of Services</p>

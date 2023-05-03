@@ -38,21 +38,20 @@ const BlogDetail = () => {
       />
       <p className="text-headerText text-4xl py-10 font-sans font-medium leading-10 text-start">Recent Posts </p>
       <RecentPosts />
-      <p className="text-headerText text-4xl py-10 font-sans font-medium leading-10 text-start">Comments </p>
       <BlogComments uid={blogID}/>
-      <p className="text-headerText text-4xl py-12 font-sans font-medium leading-10 text-start">Leave a reply </p>
+      <p className="text-headerText text-4xl pt-24 font-sans font-medium leading-10 text-start">Leave a reply </p>
       <p className="pt-4 text-xs font-sans">Your email adress will not be published. Required fields are marked*</p>
       <PostComment uid={blogID}/>
    </div>
 
    <div className="lg:pt-12 lg:px-10 pt-4 px-0">
-            <p className="text-headerText text-sm lg:text-xl font-semibold text-start pt-2"> Cardiology</p>
-            <p className="text-headerText text-sm lg:text-xl font-semibold text-start pt-2"> Pediatric</p>
-            <p className="text-headerText text-sm lg:text-xl font-semibold text-start pt-2"> Dental</p>
-            <p className="text-headerText text-sm lg:text-xl font-semibold text-start pt-2"> Gynecology</p>
-        <p className="text-headerText text-sm lg:text-xl font-semibold text-start pt-2"> Neorology</p>
+            <p className="text-violet hover:text-buttoncolor text-sm lg:text-xl font-semibold text-start pt-2"> Cardiology</p>
+            <p className="text-violet hover:text-buttoncolor text-sm lg:text-xl font-semibold text-start pt-2"> Pediatric</p>
+            <p className="text-violet hover:text-buttoncolor text-sm lg:text-xl font-semibold text-start pt-2"> Dental</p>
+            <p className="text-violet hover:text-buttoncolor text-sm lg:text-xl font-semibold text-start pt-2"> Gynecology</p>
+        <p className="text-violet hover:text-buttoncolor text-sm lg:text-xl font-semibold text-start pt-2"> Neorology</p>
         
-        <p className="text-headerText text-sm lg:text-xl font-semibold text-start pt-2"> Otorhinolaryngology</p>
+        <p className="text-violet hover:text-buttoncolor text-sm lg:text-xl font-semibold text-start pt-2"> Otorhinolaryngology</p>
         </div>
     </div>
   <Footer />

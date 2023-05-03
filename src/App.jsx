@@ -47,7 +47,7 @@ function App() {
               <Route path='/blogs' element={<Blogs />} />
             ):
             (
-              <Route path='/blogs' element={<Login />} />
+              <Route path='/login' element={<Login />} />
             )
           }
        
