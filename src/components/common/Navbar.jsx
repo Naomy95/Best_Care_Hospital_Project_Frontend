@@ -89,7 +89,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <ul className="menu menu-horizontal hidden lg:flex">
+          <ul className="menu menu-horizontal hidden lg:flex ">
             <li className="text-white text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans">
               <a href="/">Home</a>
             </li>
@@ -172,7 +172,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="flex  lg:hidden  p-2 border rounded-md border-[1px] border-white">
+          <div className="flex  lg:hidden  border rounded-md border-[1px] border-white">
 
             {token ? (
               <div>
@@ -189,7 +189,7 @@ const Navbar = () => {
             ) : (
               <label onClick={()=>{navigate('/login')}}>
                 {" "}
-                <a className=" lg:text-white border-[1px] border-buttoncolor p-2 lg:p-0 rounded-lg text-buttoncolor  text-md hover:bg-hoverBackground hover:text-black mr-4 font-sans ml-2 font-semibold lg:font-normal">
+                <a className=" lg:text-white border-[1px] border-buttoncolor p-2 lg:p-0 rounded-lg text-buttoncolor  text-md hover:bg-hoverBackground hover:text-black  font-sans ml-2 font-semibold lg:font-normal">
                   Login
                 </a>
             
