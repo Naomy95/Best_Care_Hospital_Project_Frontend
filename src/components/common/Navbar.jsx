@@ -126,7 +126,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-center lg:hidden ">
-          <img src={logo} className="h-14 w-44 " alt="Best Care" />
+          <img src={logo} className="h-14 w-44 mr-8 " alt="Best Care" />
         </div>
         <div className="navbar-end">
           <div className="lg:flex hidden  lg:items-center  p-2 border rounded-md border-[1px] border-white">
