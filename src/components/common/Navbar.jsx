@@ -14,7 +14,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="bg-black">
       <div className="navbar bg-base-100 px-2  py-2 hidden lg:flex lg:px-28">
         <div className="navbar-start">
           <img src={logo} className="h-16 w-56" alt="Best Care" />
@@ -128,6 +128,7 @@ const Navbar = () => {
         <div className="navbar-center lg:hidden ">
           <img src={logo} className="h-14 w-44 mr-8 " alt="Best Care" />
         </div>
+        
         <div className="navbar-end">
           <div className="lg:flex hidden  lg:items-center  p-2 border rounded-md border-[1px] border-white">
             <img className="w-1 h-1 lg:w-1/2 lg:h-1/2" src={login} alt="" />

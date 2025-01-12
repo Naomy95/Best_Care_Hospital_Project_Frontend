@@ -24,9 +24,8 @@ const Blogs = () => {
   if (isLoading) return <div>Loading</div>
   console.log(blogs)
 
-  const blogstoRender = blogs.filter(blog=>blog.display)
-  const numComments=blogstoRender.length
-  console.log(blogstoRender)
+  
+  console.log(blogs)
   return (
     <>
     <Navbar />
